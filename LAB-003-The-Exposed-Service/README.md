@@ -1,9 +1,9 @@
-# 🧪 LAB 002 — The Exposed Service
+#  LAB 002 — The Exposed Service
 
 > **Categoria:** Network Reconnaissance / Service Enumeration  
 > **Foco:** SSH Enumeration, Banner Analysis & Cryptographic Algorithms
 
-## 🎯 Objetivo
+##  Objetivo
 
 Investigar um serviço exposto no Linux Mint a partir do Kali Linux, identificando a porta, o serviço, a versão apresentada pelo host, o banner remoto e os algoritmos criptográficos suportados.
 
@@ -11,7 +11,7 @@ Fluxo do laboratório:
 
 **descobrir → identificar → validar → enumerar → analisar**
 
-## 🖥️ Ambiente
+##  Ambiente
 
 | Máquina | Função | Endereço |
 |---|---|---|
@@ -22,7 +22,7 @@ O Kali foi executado em uma máquina virtual através do VirtualBox. Durante a i
 
 ---
 
-## 1. 🔌 Verificação de conectividade
+## 1.  Verificação de conectividade
 
 Antes da enumeração, foi confirmado que o host alvo estava acessível pela rede.
 
@@ -32,7 +32,7 @@ Antes da enumeração, foi confirmado que o host alvo estava acessível pela red
 
 ---
 
-## 2. 🔎 Reconhecimento com Nmap
+## 2.  Reconhecimento com Nmap
 
 Foi utilizado um scan direcionado às portas mais comuns, com identificação de serviços:
 
@@ -46,7 +46,7 @@ nmap -sV --top-ports 100 192.168.0.15
 
 ---
 
-## 3. 🎯 Confirmação da porta SSH
+## 3.  Confirmação da porta SSH
 
 Depois da descoberta da porta 22, foi realizada uma verificação específica:
 
@@ -60,7 +60,7 @@ nmap -p 22 -sV 192.168.0.15
 
 ---
 
-## 4. 🧩 Investigação local do socket
+## 4.  Investigação local do socket
 
 No Linux Mint:
 
@@ -81,7 +81,7 @@ Isso indica escuta em todas as interfaces IPv4 e IPv6 disponíveis, respectivame
 
 ---
 
-## 5. 🏷️ Identificação da versão
+## 5.  Identificação da versão
 
 No Mint foi utilizado:
 
@@ -95,7 +95,7 @@ ssh -V
 
 ---
 
-## 6. 📡 Banner Enumeration
+## 6.  Banner Enumeration
 
 No Kali:
 
@@ -109,7 +109,7 @@ nmap -p 22 -sV --script=banner 192.168.0.15
 
 ---
 
-## 7. 🔐 Enumeração dos algoritmos SSH
+## 7.  Enumeração dos algoritmos SSH
 
 Foi utilizado:
 
@@ -123,7 +123,7 @@ nmap -p 22 --script ssh2-enum-algos 192.168.0.15
 
 ---
 
-## 📊 Resumo
+##  Resumo
 
 | Item | Resultado |
 |---|---|
@@ -136,7 +136,7 @@ nmap -p 22 --script ssh2-enum-algos 192.168.0.15
 | Banner | Revelou a versão do OpenSSH |
 | Algoritmos | Enumerados com `ssh2-enum-algos` |
 
-## 🧠 O que foi aprendido
+##  O que foi aprendido
 
 - Reconhecimento rápido com `--top-ports`.
 - Identificação de serviços com `-sV`.
@@ -148,13 +148,13 @@ nmap -p 22 --script ssh2-enum-algos 192.168.0.15
 - Correlação entre evidências locais e remotas.
 - Diferença entre identificar uma versão e comprovar uma vulnerabilidade.
 
-## ⚠️ Escopo e segurança
+##  Escopo e segurança
 
 Este laboratório foi realizado em equipamentos e rede sob controle do autor, com finalidade educacional.
 
 Não foram realizados brute force, exploração de credenciais ou exploração de vulnerabilidades. O objetivo foi exclusivamente praticar reconhecimento e enumeração de serviços.
 
-## 🏁 Conclusão
+##  Conclusão
 
 A investigação evoluiu de um simples host acessível para uma caracterização detalhada do serviço SSH:
 

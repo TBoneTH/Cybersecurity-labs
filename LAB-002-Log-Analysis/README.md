@@ -1,4 +1,4 @@
-#  LAB 002 — Brute Force Não Autorizado
+#  LAB 002 — Log Analysis
 
 > **Categoria:** Log Analysis / Detecção de Intrusão  
 > **Objetivo:** simular um ataque de força bruta via SSH contra um host Linux em uma rede de laboratório, identificar o padrão de ataque no log de autenticação e aplicar uma medida de contenção.

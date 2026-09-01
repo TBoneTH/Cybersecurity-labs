@@ -1,4 +1,4 @@
-#  LAB 002 — The Exposed Service
+#  LAB 003 — The Exposed Service
 
 > **Categoria:** Network Reconnaissance / Service Enumeration  
 > **Foco:** SSH Enumeration, Banner Analysis & Cryptographic Algorithms

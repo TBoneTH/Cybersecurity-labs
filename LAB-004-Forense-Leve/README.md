@@ -1,4 +1,4 @@
-# LAB 004 — Vestígios de um Acesso
+# LAB 004 — Forense Leve
 
 > **Categoria:** Forense Leve / Resposta a Incidentes (IR)
 > **Objetivo:** simular um acesso não autorizado por um usuário local, investigar os vestígios deixados no sistema e reconstruir a linha do tempo do incidente a partir de múltiplas fontes de evidência.
